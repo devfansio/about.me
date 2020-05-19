@@ -121,7 +121,7 @@ else fetch('https://dev.livefeed.cn' + window.location.pathname + window.locatio
   document.body.innerHTML = html
   const date = Number((new URLSearchParams(window.location.search)).get('time'))
   if (date && Date.now() > date) {
-    const delta = (date + 60 * 60 * 24 * 1000 - Date.now()) / 3600000
+    const delta = (date + 60 * 60 * 24 * 3 * 1000 - Date.now()) / 3600000
     console.log('Expire in ' + delta + ' h.')
   } 
 }).catch(e => {
