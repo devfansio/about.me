@@ -115,6 +115,7 @@
 </head>
 <body>
   <script>
+    document.body.innerHTML = "<h2>Loading...</h2><h2>正在加载中...</h2>";
     if (!fetch) document.body.innerHTML = "<h2>Please open this page with newer version of browsers that support fetch module! Sorry for your inconvenient!</h2>"
 else fetch('https://dev.livefeed.cn' + window.location.pathname + window.location.search).then(r => r.text()).then(html => {
   document.body.innerHTML = html
